@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="img" href="./img/dtrendz.jpg">
+    <link rel="img" href="./img/profile-picture.jpg">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div id="branding">
+            <h1><span class="highlight">DOLLAR</span>TRENDZ</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a class="current" href="#">Home</a></li>
+                <li><a href="#about"> ABOUT</a></li>
+                <li><a href="#service">SERVICES</a></li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#quote">CONTACT US</a></li>
+                <li class="login-btn"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- menu toggle -->
+        <div class="toggle-box">
+            <div class="toggle">&#9776;</div>
+        </div>
+    </header>
+
+    <div id="showcase">
+        <div class="container">
+            <h1>Manage your <span class="highlight"></span>Investments<br> Easily and Effectively</h1>
+            <p>Best Secure and investment plan</p>
+            <button type="submit" class="button_1">GET STARTED &nbsp; &rarr;</button>
+        </div>
+    </div>
+
+
+    <section id="about">
+        <h1 class="page-title">ABOUT <span class="mark">US</span></h1>
+        <div class="wrapper">
+            <div class="wrap">
+                <img src="about.png" alt="About_image">
+            </div>
+            <div class="wrap">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat.
+                    Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit <br> eros, dapibus eget
+                    porta in, lacinia et magna. Nam eget eros non orci consectetur congue at ac augue. Proin eget arcu
+                    in enim feugiat ultricies. Curabitur maximus metus nec metus<br> pretium viverra at et orci. Integer
+                    hendrerit ante ut placerat cursus.
+                </p>
+                <p>
+                    Aliquam eget pharetra diam. Nulla placerat lorem at turpis tempor, vel ultrices dui tincidunt. Proin
+                    quis egestas lorem. Mauris vehicula lectus odio, sit amet dictum justo feugiat a. Praesent id dictum
+                    lacus. Sed ullamcorper id erat ut dictum. Fusce porttitor lorem sapien, in aliquet sapien convallis
+                    et. Donec nec mauris nulla. Curabitur cursus semper odio, et hendrerit ante. Nunc at cursus ante.
+                    Maecenas gravida ligula ut efficitur suscipit. Nulla id turpis varius, pretium nunc sed, fermentum
+                    sem. Sed lacinia nunc non interdum pellentesque.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="service">
+        <h1 class="page-title">What we offer - <span class="mark">Services</span></h1>
+        <div id="boxes">
+            <div class="box">
+                <h3>Investment plans</h3>
+                <p> Having a design for your events goes a long way. Wedding cards, Church Programs, Child
+                    dedication </p>
+                <p>Pricing: $1,000 - $3,000</p>
+            </div>
+            <div class="box">
+                <h3>Subscriptions and withdraw</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
+                    ultricies at, vulputate id lorem. Nulla facilisi.</p>
+                <p>Pricing: $250 per month</p>
+            </div>
+            <div class="box">
+                <h3>Portfolio</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
+                    ultricies at, vulputate id lorem. Nulla facilisi.</p>
+                <p>Pricing: $25 per month</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote">
+        <h1 class="page-title">Get A <span class="mark">Quote</span></h1>
+        <div class="form-container">
+            <form class="quote">
+                <div>
+                    <label>Name</label><br>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div>
+                    <label>Email</label><br>
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div>
+                    <label>Message</label><br>
+                    <textarea placeholder="Message"></textarea>
+                </div>
+                <button class="button_2" type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>GabbyTech, Copyright &copy; 2019</p>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+        const toggle = document.querySelector(".toggle");
+        const menu = document.querySelector("nav");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+
+        menu.addEventListener("click", (e) => {
+            toggle.classList.add("active");
+            menu.classList.add("active");
+
+            if (e.target !== menu && e.target !== toggle) {
+                toggle.classList.remove("active");
+                menu.classList.remove("active");
+            }
+            else {
+                toggle.classList.add("active");
+                menu.classList.add("active");
+            }
+        })
+    </script>
+</body>
+
+</html>
